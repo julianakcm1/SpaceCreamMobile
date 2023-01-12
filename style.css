@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: 'Staatliches', cursive;
+  --ff-secondary: 'Palanquin', sans-serif;
+
+  --fc-heading: hsla(0, 0%, 100%, 1);
+  --fc-p: hsl(274, 84%, 12%);
+  --fc-h2: hsl(232, 17%, 35%);
+
+  font-size: 62.5%;
+  --fs-body: 2rem;
+
+  --bg-heading: hsl(218, 17%, 62%);
+  --bg-heading-h1: hsla(275, 18%, 79%);
+  --bg-secondary: hsl(233, 100%, 97%);
+  --bg-secondary-sm: hsl(312, 91%, 96%);
+
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  background-color: var(--bg-secondary);
+}
+
+.page {
+  /* max-width: 384px; */
+  /* max-width: clamp(33rem, 30rem + 68vw, 117rem); */
+  /* height: 1995px; */
+  
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--bg-heading);
+  display: grid;
+  place-items: center;
+}
+
+header img {
+  margin: 3.2rem 0 3.2rem;
+}
+
+header h1 {
+  color: var(--fc-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  width: 100%;
+  text-align: center;
+
+  background-color: var(--bg-heading-h1);
+
+  padding: 0.8rem 8.6rem 0.7rem 8.7rem;
+
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  margin-bottom: 2.9rem;
+}
+
+main {
+  padding: 1.4rem 3.2rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main p {
+  font-family: var(--ff-secondary);
+  font-size: 1.4rem;
+  line-height: 2rem;
+
+  color: var(--fc-p);
+
+  margin-bottom: 6.3rem;
+
+  width: 31.5rem;
+
+  text-align: center; 
+}
+
+cards {
+  display: grid;
+  gap: 3.2rem;
+
+  text-align: center;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  transition: all 200ms;
+  animation: downtop 700ms 350ms backwards;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.card h2 {
+  color: var(--fc-h2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3.4rem;
+  
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  
+  border-radius: 2rem;
+  background-color: var(--bg-secondary-sm);
+  
+  width: 11.2rem;
+  height: 3.5rem;
+  
+  padding: 1px 2.3rem 0 2.4rem;
+  /* display: inline-flex;
+  align-items: center; */
+
+  animation: topdown 700ms 350ms backwards;
+}
+
+.card h2:hover {
+  transform: scale(1.1);
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
