@@ -1,4 +1,4 @@
-# projeto-stage3.3-desafio1
+# Space Cream Mobile
 Curso Explorer - Rocketseat
 
 **Mobile first**
